@@ -21,7 +21,7 @@ const isDev = process.env.NODE_ENV === "development";
 
 // Sincronización inteligente
 await db.sequelize.sync({
-  force: isDev // solo borra BD en desarrollo
+  alter: true 
 });
 
 // Inicializar roles (solo si no existen)
