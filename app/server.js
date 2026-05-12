@@ -20,9 +20,9 @@ app.use(express.json());
 const isDev = process.env.NODE_ENV === "development";
 
 // Sincronización inteligente
-await db.sequelize.sync({
-  alter: true 
-});
+//await db.sequelize.sync({
+  //alter: true 
+//});
 
 // Inicializar roles (solo si no existen)
 const count = await db.role.count();
